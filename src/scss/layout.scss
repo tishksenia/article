@@ -1,6 +1,8 @@
 $header-height: 40px;
 $footer-height: 300px;
-
+* {
+    box-sizing: border-box;
+}
 // HEADER LAYOUT
 
 html, body {
@@ -49,6 +51,7 @@ body {
 
 .container {
     min-height: 100%;
+    margin-top: $header-height;
     margin-bottom: -$footer-height;
 }
 

@@ -1,10 +1,12 @@
 const { src, dest, parallel, start, watch, series } = require('gulp');
 const sass = require('gulp-sass')
 const pug = require('gulp-pug');
+const concat = require('gulp-concat');
 
 function css() {
-  return src('src/scss/*.scss')
-  .pipe(sass())
+  return src('src/scss/**')
+  .pipe(concat('style.scss'))
+  .pipe(sass({outputStyle: 'compressed'}))
   .pipe(dest('dist/css'))
 }
 
