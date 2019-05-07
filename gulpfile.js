@@ -1,13 +1,6 @@
 const { src, dest, parallel, start, watch, series } = require('gulp');
 const sass = require('gulp-sass')
 const pug = require('gulp-pug');
-//const watch = require('gulp-watch');
-
-// gulp.task('sass', function() {
-//   gulp.src('src/scss')
-//   .pipe(sass())
-//   .pipe(gulp.dest('dist/css'))
-// });
 
 function css() {
   return src('src/scss/*.scss')
