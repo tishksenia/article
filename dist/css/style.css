@@ -37,9 +37,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-p {
-  font-family: 'Open Sans', sans-serif; }
-
 * {
   box-sizing: border-box; }
 
@@ -63,7 +60,8 @@ body {
   position: fixed;
   top: 0;
   border-bottom: 1px solid lightgray;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  z-index: 99; }
 
 .site-header_wrapper {
   width: 87%;
@@ -77,10 +75,6 @@ body {
 .logo {
   width: 200px;
   padding-top: 5px; }
-
-.container, .site-footer {
-  max-width: 65%;
-  margin: 0 auto; }
 
 .container {
   padding: 20px;
@@ -135,6 +129,10 @@ body {
     .copyright-area a:hover {
       text-decoration: underline; }
 
+.container, .site-footer {
+  max-width: 65%;
+  margin: 0 auto; }
+
 .article-container {
   padding-top: 47px;
   padding-bottom: 74px;
@@ -155,7 +153,9 @@ body {
     color: #000000; }
     .article-container p.author a {
       color: #000000;
-      text-decoration-color: #333333; }
+      text-decoration-color: #CCCCCC; }
+      .article-container p.author a:hover {
+        text-decoration: none; }
   .article-container p.date {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9em;
@@ -200,15 +200,81 @@ body {
   padding-bottom: 12px; }
   .content-caption p {
     color: #666666;
-    font-size: 0.9em;
+    font-size: 0.95em;
     padding: 0; }
-  .content-caption p.credit {
+  .content-caption .credit {
     color: #888888;
-    font-size: 0.8em; }
+    font-size: 0.85em; }
+
+.widest-content-piece {
+  width: 200%;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  position: relative;
+  left: -50%;
+  z-index: 1; }
+  .widest-content-piece .content-caption {
+    max-width: 75%; }
+
+.wide-content-piece {
+  width: 120%;
+  position: relative;
+  left: -10%; }
+
+.suggestions-container {
+  display: flex;
+  justify-content: space-between; }
+
+.suggestions {
+  border-top: 1px solid #000000;
+  padding-top: 18px;
+  padding-bottom: 18px; }
+  .suggestions h2 {
+    font-weight: bold;
+    font-size: 0.9em;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 18px; }
+    .suggestions h2:hover {
+      text-decoration: underline; }
+
+.most-popular {
+  width: 28%; }
+  .most-popular h2:hover {
+    text-decoration: none; }
+
+.article-previews {
+  width: 70%; }
+  .article-previews .article-preview, .article-previews .empty-preview {
+    width: 33.3%;
+    padding-right: 16px;
+    padding-bottom: 22px;
+    display: inline-block;
+    vertical-align: text-top; }
+
+.heading-link {
+  color: #000000;
+  text-decoration: none; }
+
+.article-preview p.credit {
+  padding-top: 4px;
+  text-align: right;
+  font-size: 0.65em;
+  line-height: 1.2em;
+  color: #888888; }
+
+.article-preview p.date {
+  font-size: 0.7em;
+  color: #888888; }
+
+img {
+  width: 100%;
+  height: auto; }
 
 a {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: -0.5px; }
+  a:hover {
+    cursor: pointer; }
 
 a.header-link {
   font-size: 0.85em;
@@ -226,9 +292,6 @@ a.header-link {
   position: relative;
   top: 12px; }
 
-a:hover {
-  cursor: pointer; }
-
 .footer-column a {
   display: block;
   color: black;
@@ -243,18 +306,45 @@ a.highlights {
   font-size: 0.94em; }
 
 a.details {
-  font-size: 0.7em; }
+  font-size: 0.7em;
+  line-height: 2em; }
 
 .article a {
   color: #326891; }
   .article a:hover {
     text-decoration: none; }
 
+.article-preview a {
+  font-size: 1.1em;
+  color: #000000;
+  line-height: 1.2em;
+  font-family: 'PT Serif', serif;
+  text-decoration: none; }
+  .article-preview a:hover {
+    color: #666666; }
+  .article-preview a h3 {
+    padding: 8px 0; }
+
+.content-caption a {
+  font-family: 'PT Serif', serif; }
+
 .credit a {
   color: inherit;
   text-decoration: none; }
   .credit a:hover {
     text-decoration: underline; }
+
+.most-popular a {
+  display: block;
+  padding: 17px 0;
+  font-family: 'PT Serif', serif;
+  color: #000000;
+  font-size: 1.15em;
+  line-height: 1.15em;
+  text-decoration: none;
+  border-top: 1px solid #E2E2E2; }
+  .most-popular a:hover {
+    color: #666666; }
 
 button {
   padding: 6px 8px;

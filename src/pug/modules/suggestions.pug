@@ -1,0 +1,44 @@
+mixin suggestions(title, className, titleIsLink)
+    div(class='suggestions' class= className)
+        if titleIsLink
+            a(href='#').heading-link
+                h2= title
+        else
+            h2= title
+        block
+
+mixin article-preview(title, credit, date, imageUrl)
+    .article-preview
+        a(href='#')
+            img(src= imageUrl)
+        p.credit= credit
+        a(href='#')
+            h3= title
+        p.date= date        
+
+.suggestions-container
+    .article-previews
+        +suggestions('More in Space & Cosmos', 'more-in-category', 1)
+            .articles
+                +article-preview('Jeff Bezos Unveils Blue Origin’s Vision for Space, and a Moon Lander', 'Tom Brenner for The New York Times', '3h ago', 'https://static01.nyt.com/images/2019/05/09/science/09BLUEORIGIN3/09BLUEORIGIN3-threeByTwoSmallAt2X.jpg')
+                +article-preview('A Violent Splash of Magma That May Have Made the Moon', 'Image by 2019 Natsuki Hosono, Hirotaka Nakayama, 4D2U Project, NAOJ', 'May 1', 'https://static01.nyt.com/images/2019/05/01/science/01tb-moon-video-still/01tb-moon-video-still-threeByTwoSmallAt2X.png')
+                .empty-preview
+                +article-preview('Scott Kelly Spent a Year in Orbit. His Body Is Not Quite the Same.', 'JSC/NASA', 'April 11', 'https://static01.nyt.com/images/2019/04/11/science/11ASTROTWINS1/11ASTROTWINS1-threeByTwoSmallAt2X.jpg')
+                +article-preview('Darkness Visible, Finally: Astronomers Capture First Ever Image of a Black Hole', 'Event Horizon Telescope Collaboration, via National Science Foundation',  'April 10', 'https://static01.nyt.com/images/2019/04/10/science/10BLACKHOLEPHOTO/10BLACKHOLEPHOTO-threeByTwoSmallAt2X-v3.jpg')
+                +article-preview('How Katie Bouman Accidentally Became the Face of the Black Hole Project', '', 'April 12', 'https://static01.nyt.com/images/2019/04/11/science/11xp-blackhole-promo/11xp-blackhole-promo-threeByTwoSmallAt2X.png')
+        +suggestions("Editor's pick", 'editors-pick')
+            .articles
+                +article-preview('An Extraordinary New Book Dismantles the Myths That Surround Domestic Violence', 'Sonny Figueroa/The New York Times', 'May 7', 'https://static01.nyt.com/images/2019/05/07/books/07booksnyder-2/07booksnyder-2-threeByTwoSmallAt2X.jpg')
+                +article-preview('‘I Felt Terrible. True New Yorkers Don’t Acknowledge Celebrities.’', '', 'May 6', 'https://static01.nyt.com/images/2019/05/06/nyregion/06diary-3/06diary-3-threeByTwoSmallAt2X.jpg')
+                +article-preview('Years Ago, My Sister Vanished. I See Her Whenever I Want.', 'Brian Rea', 'May 3', 'https://static01.nyt.com/images/2019/05/05/fashion/05MODERNLOVE/05MODERNLOVE-threeByTwoSmallAt2X.jpg')
+    +suggestions('Most Popular', 'most-popular')
+        a(href='#') Money, Ethics, Art: Can Museums Police Themselves?
+        a(href='#') Trash, the Library and a Worn, Brown Table: The 2019 College Essays on Money
+        a(href='#') Howard Stern Says He’s Changed. How Much?
+        a(href='#') Decade in the Red: Trump Tax Figures Show Over $1 Billion in Business Losses
+        a(href='#') Opinion: It’s Time to Break Up Facebook
+        a(href='#') The Subpoena and Contempt Fight Between Trump and Congress, Explained
+        a(href='#') After a Messy Breakup With New York, Amazon Is Back With a Cashierless Go Store
+        a(href='#') 28 Portraits of This Year’s Tony Nominees
+        a(href='#') ‘The Cat in the Hat’ and the Man Who Made That
+        a(href='#') A Rare View of the Met Gala
