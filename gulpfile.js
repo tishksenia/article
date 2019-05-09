@@ -5,8 +5,8 @@ const concat = require('gulp-concat');
 
 function css() {
   return src('src/scss/**')
-  .pipe(concat('style.scss'))
-  .pipe(sass({outputStyle: 'compressed'}))
+  .pipe(sass())
+  //.pipe(concat('style.css'))
   .pipe(dest('dist/css'))
 }
 

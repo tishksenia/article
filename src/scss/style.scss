@@ -7,6 +7,7 @@
 // LINKS
 a {
     font-family: 'Open Sans', sans-serif;
+    letter-spacing: -0.5px;
 }
 
 a.header-link {
@@ -21,9 +22,11 @@ a.header-link {
     }
 }
 .homepage-link a {
-    font-size: 0.8em;
+    font-size: 0.7em;
     text-decoration: none;
-    color: #7BBBE8;
+    color: #6CA6B9;
+    position: relative;
+    top: 12px;
     &:hover {
         cursor: pointer;
     }
@@ -45,6 +48,9 @@ a.header-link {
 a.highlights {
     font-weight: bold;
     font-size: 0.94em;
+}
+a.details {
+    font-size: 0.7em;
 }
 
 // BUTTONS
