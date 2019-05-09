@@ -18,7 +18,6 @@ a.header-link {
     font-weight: bold;
     &:hover {
         text-decoration: underline;
-        cursor: pointer;
     }
 }
 .homepage-link a {
@@ -27,10 +26,13 @@ a.header-link {
     color: #6CA6B9;
     position: relative;
     top: 12px;
+
+}
+
+a { //.footer-column a, a.highlights, a.details, a.header-link, .homepage-link a {
     &:hover {
         cursor: pointer;
     }
-
 }
 
 .footer-column a {
@@ -41,7 +43,6 @@ a.header-link {
     line-height: 1.8em;
     &:hover {
         text-decoration: underline;
-        cursor: pointer;
     }
 
 }
@@ -51,6 +52,21 @@ a.highlights {
 }
 a.details {
     font-size: 0.7em;
+}
+
+.article a {
+    color: #326891;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.credit a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 // BUTTONS
@@ -71,6 +87,11 @@ button {
         background-color: #326891;
         cursor: pointer;
     }
+}
+.article-footer button {
+    padding: 8px 90px;
+    font-size: 0.8em;
+    max-width: 60%;
 }
 .main-menu-btn {
     margin-left: 8px;
