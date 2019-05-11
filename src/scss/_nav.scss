@@ -1,0 +1,123 @@
+// MENU
+/*
+nav-container
+    ul.nav
+        li.nav-item
+            a
+        li.nav-item
+            ul.submenu
+                h3
+                li.submenu-item
+                    a
+
+*/
+.nav-container {
+    background-color: #FFFFFF;
+    border-right: 1px solid $menu-border;
+    position: fixed;
+    left: 0;
+    top:0;
+    bottom:0;
+    width: 12%;
+    z-index: 100;
+    padding: 10px 18px;
+
+    -webkit-box-shadow: 7px 0px 12px 0px $menu-shadow;
+    -moz-box-shadow: 7px 0px 12px 0px $menu-shadow;
+    box-shadow: 7px 0px 12px 0px $menu-shadow;
+}
+.navs {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.submenu.open {
+    z-index: 101;
+    position: fixed;
+    display: block;
+    width: 200px;
+    min-height: 200px;
+    transform: translateX(97%) translateY(-19%);
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid $menu-border;
+    -webkit-box-shadow: 6px 13px 12px -2px rgba(206,206,206,0.47);
+    -moz-box-shadow: 6px 13px 12px -2px rgba(206,206,206,0.47);
+    box-shadow: 6px 13px 12px -2px rgba(206,206,206,0.47);
+
+
+    &:before, &:after {
+        right: 100%;
+        top: 25%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    &:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: #FFFFFF;
+        border-width: 15px;
+        margin-top: -15px;
+    }
+    &::before {
+        border-color: rgba(206, 206, 206, 0);
+        border-right-color: #CECECE;
+        border-width: 16px;
+        margin-top: -16px;
+    }
+}
+.submenu.closed {
+    display: none;
+}
+
+.nav {
+    border-bottom: 1px solid $footer-borders;
+    padding: 12px 0;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+.nav-item {
+    position: relative;
+}
+.nav a {
+    padding: 8px;
+    display: block;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $nav-highlight;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+
+.submenu-indicator {
+    position: absolute;
+    right: 4px;
+    color: $submenu-indicator;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+
+.submenu h3 {
+    padding: 0 8px 8px 8px;
+    font-family: 'Open Sans', sans-serif;
+    color: $nav-heading;
+
+    text-transform: uppercase;
+    font-size: 0.75em;
+    letter-spacing: -1px;
+}

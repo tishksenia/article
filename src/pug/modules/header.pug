@@ -1,3 +1,51 @@
+//- var nav-main = ['Home Page', 'World', 'U.S.', 'Politics', 'N.Y.', 'Business', 'Opinion', 'Tech', 'Science', 'Health']
+//- var nav-extra = ['Arts', 'Books', 'Style', 'Food', 'Travel', 'Magazine', 'T Magazine', 'Real Estate', 'Obituaries', 'Video', 'The Upshot']
+//- var nav-more = {'More'}
+//- var nav = [{url: '/', name: 'Home'}, {url: 'about.html', name: 'About'}];
+
+
+//- var us_submenu = [{url: '#', name: 'Education'}, {url: '#', name: 'The Upshot'}]
+- var world_submenu = [{url: '#', name: 'Africa'}, {url: '#', name: 'Australia'}, {url: '#', name: 'Americas'}, {url: '#', name: 'Asia Pacific'}, {url: '#', name: 'Europe'}, {url: '#', name: 'Middle East'}];
+//- var world_submenu = [{url: '#', name: 'Africa'}];
+- var nav_main = [{url: '#', name: 'Home Page'}, {url: '#', name: 'World', submenu: world_submenu}, {url: '#', name: 'U.S.', submenu: us_submenu}];
+- var nav_extra = [{url: '#', name: 'Arts'}, {url: '#', name: 'Books'}, {url: '#', name: 'Style'}, {url: '#', name: 'Food'}]
+- var nav_more = [{url: '#', name: 'More'}]
+mixin nav(nav_array)
+    ul.nav
+        each i in nav_array
+            +nav_item(i.url, i.name, i.submenu)
+mixin nav_item(url, name, submenu)
+    if(submenu)
+            li.nav-item
+                +submenu(submenu, name)
+                a(href=url)= name
+                    span.submenu-indicator >
+                
+    else
+        li.nav-item
+            a(href= url)= name
+
+mixin submenu(nav_array, title)
+    ul.submenu.closed   
+        h3= title
+        each i in nav_array
+            +submenu_item(i.url, i.name, i.submenu)
+
+mixin submenu_item(url, name, submenu)
+    if(submenu)
+        li.nav-item
+            +submenu(submenu, name)
+            a(href= url)= name
+            span.submenu-indicator >
+    else
+        li.nav-item
+            a(href= url)= name
+        
+.nav-container
+    .navs
+        +nav(nav_main)
+        +nav(nav_extra)
+        +nav(nav_more)
 header.site-header
     .site-header_wrapper
         .menu
