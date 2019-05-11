@@ -56,6 +56,7 @@ a.details {
 }
 
 .article a {
+    font-family: 'PT Serif', serif;
     color: #326891;
     &:hover {
         text-decoration: none;
@@ -119,6 +120,12 @@ button {
         cursor: pointer;
     }
 }
+button[class|=icon] {
+    border: 0;
+    color: black;
+    background: none;
+}
+
 .article-footer button {
     padding: 8px 90px;
     font-size: 0.8em;

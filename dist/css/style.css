@@ -37,6 +37,86 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../media/fonts/icomoon.eot?rci44r");
+  src: url("../media/fonts/icomoon.eot?rci44r#iefix") format("embedded-opentype"), url("../media/fonts/icomoon.ttf?rci44r") format("truetype"), url("../media/fonts/icomoon.woff?rci44r") format("woff"), url("../media/fonts/icomoon.svg?rci44r#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-chat:before {
+  content: "\e900"; }
+
+.icon-bubbles:before {
+  content: "\e900"; }
+
+.icon-talk:before {
+  content: "\e900"; }
+
+.icon-message:before {
+  content: "\e900"; }
+
+.icon-conversation:before {
+  content: "\e900"; }
+
+.icon-bubble:before {
+  content: "\e901"; }
+
+.icon-comment:before {
+  content: "\e901"; }
+
+.icon-chat1:before {
+  content: "\e901"; }
+
+.icon-talk1:before {
+  content: "\e901"; }
+
+.icon-bookmark:before {
+  content: "\e902"; }
+
+.icon-search1:before {
+  content: "\e903"; }
+
+.icon-mail-forward:before {
+  content: "\e904"; }
+
+.icon-share:before {
+  content: "\e904"; }
+
+.icon-chat_bubble_outline:before {
+  content: "\e905"; }
+
+.icon-search:before {
+  content: "\e906"; }
+
+.icon-envelope:before {
+  content: "\e907"; }
+
+.icon-menu:before {
+  content: "\e908"; }
+
+.icon-enlarge2:before {
+  content: "\e98b"; }
+
+.icon-facebook:before {
+  content: "\ea90"; }
+
+.icon-twitter:before {
+  content: "\ea96"; }
+
 * {
   box-sizing: border-box; }
 
@@ -45,7 +125,7 @@ html, body {
   margin: 0; }
 
 body {
-  margin-top: 40px; }
+  margin-top: 46px; }
 
 .buttons, .menu {
   width: 300px; }
@@ -55,7 +135,7 @@ body {
   justify-content: flex-end; }
 
 .site-header {
-  height: 40px;
+  height: 46px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -76,10 +156,19 @@ body {
   width: 200px;
   padding-top: 5px; }
 
+.menu .glyph {
+  font-size: 1em;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 8px;
+  border-radius: 4px; }
+  .menu .glyph:hover {
+    background-color: #F7F7F7; }
+
 .container {
   padding: 20px;
   min-height: 100%;
-  margin-top: 40px;
+  margin-top: 46px;
   margin-bottom: -440px; }
 
 .push, .site-footer {
@@ -181,6 +270,30 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%; }
+  .article-head .glyph, .article-footer .glyph {
+    transition-duration: 0s;
+    background: #EEEEEE;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 14px;
+    margin-left: 14px; }
+    .article-head .glyph:hover, .article-footer .glyph:hover {
+      background: none;
+      padding: 5px;
+      border: 1px solid #CDCDCD; }
+  .article-head .light, .article-footer .light {
+    height: 100%;
+    padding: 0;
+    vertical-align: middle;
+    color: #CCCCCC;
+    background: none;
+    color: black;
+    font-size: 2.2em;
+    margin-left: 14px; }
+    .article-head .light:hover, .article-footer .light:hover {
+      border: none;
+      padding: 0;
+      color: #C2C2C2; }
 
 .yt-video {
   position: relative;
@@ -310,6 +423,7 @@ a.details {
   line-height: 2em; }
 
 .article a {
+  font-family: 'PT Serif', serif;
   color: #326891; }
   .article a:hover {
     text-decoration: none; }
@@ -361,6 +475,11 @@ button {
   button:hover {
     background-color: #326891;
     cursor: pointer; }
+
+button[class|=icon] {
+  border: 0;
+  color: black;
+  background: none; }
 
 .article-footer button {
   padding: 8px 90px;
