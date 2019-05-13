@@ -6,17 +6,17 @@
 
 //- var us_submenu = [{url: '#', name: 'Education'}, {url: '#', name: 'The Upshot'}]
 - var world_submenu = [{url: '#', name: 'Africa'}, {url: '#', name: 'Australia'}, {url: '#', name: 'Americas'}, {url: '#', name: 'Asia Pacific'}, {url: '#', name: 'Europe'}, {url: '#', name: 'Middle East'}];
-//- var world_submenu = [{url: '#', name: 'Africa'}];
-- var nav_main = [{url: '#', name: 'Home Page'}, {url: '#', name: 'World', submenu: world_submenu}, {url: '#', name: 'U.S.', submenu: us_submenu}];
+- var more_submenu = [{url: '#', name: 'Africa'}];
+- var nav_main = [{url: '#', name: 'Home Page'}, {url: '#', name: 'World', submenu: world_submenu}, {url: '#', name: 'U.S.', submenu: world_submenu}];
 - var nav_extra = [{url: '#', name: 'Arts'}, {url: '#', name: 'Books'}, {url: '#', name: 'Style'}, {url: '#', name: 'Food'}]
-- var nav_more = [{url: '#', name: 'More'}]
+- var nav_more = [{url: '#', name: 'More', submenu: more_submenu}]
 mixin nav(nav_array)
     ul.nav
         each i in nav_array
             +nav_item(i.url, i.name, i.submenu)
 mixin nav_item(url, name, submenu)
     if(submenu)
-            li.nav-item
+            li.nav-item.item-with-submenu
                 +submenu(submenu, name)
                 a(href=url)= name
                     span.submenu-indicator >
@@ -26,7 +26,7 @@ mixin nav_item(url, name, submenu)
             a(href= url)= name
 
 mixin submenu(nav_array, title)
-    ul.submenu.closed   
+    ul.submenu   
         h3= title
         each i in nav_array
             +submenu_item(i.url, i.name, i.submenu)

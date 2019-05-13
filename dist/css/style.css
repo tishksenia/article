@@ -234,10 +234,11 @@ nav-container
   background-color: #FFFFFF;
   border-right: 1px solid #CECECE;
   position: fixed;
+  visibility: hidden;
   left: 0;
   top: 0;
   bottom: 0;
-  width: 12%;
+  width: 226px;
   z-index: 100;
   padding: 10px 18px;
   -webkit-box-shadow: 7px 0px 12px 0px rgba(206, 206, 206, 0.47);
@@ -250,20 +251,21 @@ nav-container
   height: 100%;
   padding: 0; }
 
-.submenu.open {
+.submenu {
   z-index: 101;
   position: fixed;
   display: block;
+  visibility: hidden;
   width: 200px;
   min-height: 200px;
-  transform: translateX(97%) translateY(-19%);
+  transform: translateX(97%) translateY(-19.5%);
   background-color: #FFFFFF;
   padding: 20px;
   border: 1px solid #CECECE;
   -webkit-box-shadow: 6px 13px 12px -2px rgba(206, 206, 206, 0.47);
   -moz-box-shadow: 6px 13px 12px -2px rgba(206, 206, 206, 0.47);
   box-shadow: 6px 13px 12px -2px rgba(206, 206, 206, 0.47); }
-  .submenu.open:before, .submenu.open:after {
+  .submenu:before, .submenu:after {
     right: 100%;
     top: 25%;
     border: solid transparent;
@@ -272,19 +274,16 @@ nav-container
     width: 0;
     position: absolute;
     pointer-events: none; }
-  .submenu.open:after {
+  .submenu:after {
     border-color: rgba(255, 255, 255, 0);
     border-right-color: #FFFFFF;
     border-width: 15px;
     margin-top: -15px; }
-  .submenu.open::before {
+  .submenu::before {
     border-color: rgba(206, 206, 206, 0);
     border-right-color: #CECECE;
     border-width: 16px;
     margin-top: -16px; }
-
-.submenu.closed {
-  display: none; }
 
 .nav {
   border-bottom: 1px solid #EBEBEB;

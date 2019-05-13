@@ -28,7 +28,7 @@ function js() {
   .pipe(uglify())
   .pipe(concat('app.js'))
   .pipe(dest('dist/js/'))
-  //.pipe(livereload())
+  .pipe(livereload())
 }
 
 function watch_css() {
@@ -39,8 +39,12 @@ function watch_html() {
     livereload.listen();
     return watch('src/pug/**/*.pug', series('html'));
 }
+function watch_js() {
+    livereload.listen();
+    return watch('src/js/*.js', series('js'));
+}
 exports.css = css;
 exports.html = html;
 exports.js = js;
-exports.default = parallel(html, css);
-exports.watch = parallel(watch_css, watch_html);
+exports.default = parallel(html, css, js);
+exports.watch = parallel(watch_css, watch_html, watch_js);
