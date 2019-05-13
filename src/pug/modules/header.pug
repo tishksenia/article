@@ -2,14 +2,39 @@
 //- var nav-extra = ['Arts', 'Books', 'Style', 'Food', 'Travel', 'Magazine', 'T Magazine', 'Real Estate', 'Obituaries', 'Video', 'The Upshot']
 //- var nav-more = {'More'}
 //- var nav = [{url: '/', name: 'Home'}, {url: 'about.html', name: 'About'}];
+//- {url: '#', name: ''}
+//- {url: '#', name: '', submenu:}
 
-
-//- var us_submenu = [{url: '#', name: 'Education'}, {url: '#', name: 'The Upshot'}]
+//- nav_main
+- var sports_submenu = [{url: '#', name: 'Baseball'}, {url: '#', name: 'Backetball: College'}, {url: '#', name: 'Basketball: N.B.A.'}, {url: '#', name: 'Football: College'}, {url: '#', name: 'Football: N.F.L.'}, {url: '#', name: 'Golf'}, {url: '#', name: 'Hockey'}, {url: '#', name: 'Soccer'}, {url: '#', name: 'Tennis'}];
+- var health_submenu = [{url: '#', name: 'Money & Policy'}, {url: '#', name: 'Health Guide'}];
+- var science_submenu = [{url: '#', name: 'Environment'}, {url: '#', name: 'Space & Cosmos'}];
+- var tech_submenu = [{url: '#', name: 'Personal Tech'}];
+- var opinion_submenu = [{url: '#', name: 'Op-Ed Columnists'}, {url: '#', name: 'Editorials'}, {url: '#', name: 'Op-Ed Contributors'}, {url: '#', name: 'Letters'}, {url: '#', name: 'Sunday Review'}];
+- var bussiness_submenu = [{url: '#', name: 'DealBook'}, {url: '#', name: 'Economy'}, {url: '#', name: 'Energy'}, {url: '#', name: 'Markets'}, {url: '#', name: 'Media'}, {url: '#', name: 'Entrepreneurship'}, {url: '#', name: 'Your Money'}, {url: '#', name: 'Automobiles'}];
+- var ny_submenu = [{url: '#', name: 'Events'}];
+- var us_submenu = [{url: '#', name: 'Education'}, {url: '#', name: 'The Upshot'}];
+- var politics_submenu = [{url: '#', name: 'Election'}, {url: '#', name: 'The Upshot'}];
 - var world_submenu = [{url: '#', name: 'Africa'}, {url: '#', name: 'Australia'}, {url: '#', name: 'Americas'}, {url: '#', name: 'Asia Pacific'}, {url: '#', name: 'Europe'}, {url: '#', name: 'Middle East'}];
-- var more_submenu = [{url: '#', name: 'Africa'}];
-- var nav_main = [{url: '#', name: 'Home Page'}, {url: '#', name: 'World', submenu: world_submenu}, {url: '#', name: 'U.S.', submenu: world_submenu}];
-- var nav_extra = [{url: '#', name: 'Arts'}, {url: '#', name: 'Books'}, {url: '#', name: 'Style'}, {url: '#', name: 'Food'}]
+- var nav_main = [{url: '#', name: 'Home Page'}, {url: '#', name: 'World', submenu: world_submenu}, {url: '#', name: 'U.S.', submenu: us_submenu}, {url: '#', name: 'Politics', submenu: politics_submenu}, {url: '#', name: 'N.Y.', submenu: ny_submenu}, {url: '#', name: 'Business', submenu: bussiness_submenu}, {url: '#', name: 'Opinion', submenu: opinion_submenu}, {url: '#', name: 'Tech', submenu: tech_submenu}, {url: '#', name: 'Science', submenu: science_submenu}, {url: '#', name: 'Health', submenu: health_submenu}, {url: '#', name: 'Sports', submenu: sports_submenu}];
+
+//- nav_extra
+- var video_submenu  = [{url: '#', name: 'U.S. & Politics'}, {url: '#', name: 'International'}, {url: '#', name: 'N.Y.'}, {url: '#', name: 'Op-Docs'}, {url: '#', name: 'Opinion'}, {url: '#', name: 'Times Documentaries'}, {url: '#', name: 'Business'}, {url: '#', name: 'Tech'}, {url: '#', name: 'Culture'}, {url: '#', name: 'Style'},{url: '#', name: 'T Magazine'}, {url: '#', name: 'Health'}, {url: '#', name: 'Food'}, {url: '#', name: 'Travel'}];
+- var estate_submenu = [{url: '#', name: 'Commercial'}, {url: '#', name: 'Find A home'}, {url: '#', name: 'Mortgage Calculator'}, {url: '#', name: 'My Real Estate'}, {url: '#', name: 'The High End'}, {url: '#', name: 'iPhone App'}, {url: '#', name: 'List Your Home'}];
+- var food_submenu = [{url: '#', name: 'Cooking'}, {url: '#', name: 'Restaraunt Search'}];
+- var style_submenu = [{url: '#', name: "Men's Style"}, {url: '#', name: 'On the Runway'}, {url: '#', name: 'Weddings'}];
+- var books_submenu = [{url: '#', name: 'Best Sellers'}, {url: '#', name: 'By the Book'}, {url: '#', name: 'The Book Review'}, {url: '#', name: 'Book Review Podcast'}];
+- var arts_submenu = [{url: '#', name: 'Art & Design'}, {url: '#', name: 'Dance'}, {url: '#', name: 'Movies'}, {url: '#', name: 'Music'}, {url: '#', name: 'Pop Culture'}, {url: '#', name: 'Television'}, {url: '#', name: 'Theater'}, {url: '#', name: 'Watching'}];
+- var nav_extra = [{url: '#', name: 'Arts', submenu: arts_submenu}, {url: '#', name: 'Books', submenu: books_submenu}, {url: '#', name: 'Style', submenu: style_submenu}, {url: '#', name: 'Food', submenu: food_submenu}, {url: '#', name: 'Travel'}, {url: '#', name: 'Magazine'}, {url: '#', name: 'T Magazine'}, {url: '#', name: 'Real Estate', submenu: estate_submenu}, {url: '#', name: 'Obituaries'}, {url: '#', name: 'Video', submenu: video_submenu}, {url: '#', name: 'The Upshot'} ]
+
+
+
+//- nav_more
+- var conferences_submenu
+- var more_submenu = [{url: '#', name: 'Reader Center'}, {url: '#', name: 'Wirecutter'}, {url: '#', name: 'Live Events'}, {url: '#', name: 'Conferences', submenu: conferences_submenu}, {url: '#', name: 'Crossword'}, {url: '#', name: 'Newsletters'}, {url: '#', name: 'The Learning Network'}, {url: '#', name: 'Multimedia'}, {url: '#', name: 'Photography'}, {url: '#', name: 'Podcasts'}, {url: '#', name: 'NYT Store'}, {url: '#', name: 'NYT Wine Club'}, {url: '#', name: 'School of NYT'}, {url: '#', name: 'Times Journeys'}, {url: '#', name: 'Subscribe'}, {url: '#', name: 'Manage Account'}, {url: '#', name: "Today's Paper"}, {url: '#', name: 'Tools & Services'}, {url: '#', name: 'Jobs'}, {url: '#', name: 'Corrections'}];
 - var nav_more = [{url: '#', name: 'More', submenu: more_submenu}]
+
+
 mixin nav(nav_array)
     ul.nav
         each i in nav_array
@@ -47,7 +72,7 @@ mixin submenu_item(url, name, submenu)
         +nav(nav_extra)
         +nav(nav_more)
 header.site-header
-    .site-header_wrapper
+    .site-header_wrapper.top-page-content 
         .menu
             button.icon-menu.glyph
             button.icon-search1.glyph
@@ -57,6 +82,7 @@ header.site-header
         .buttons
             button.main-menu-btn Subscribe now
             button.main-menu-btn Log In
+    .side-header_wrapper.scroll-content
             
         
         
