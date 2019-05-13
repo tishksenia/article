@@ -165,6 +165,29 @@ body {
   .menu .glyph:hover {
     background-color: #F7F7F7; }
 
+.top-page-content, .scroll-content {
+  transition-duration: 0.5; }
+
+.scroll-content {
+  display: none; }
+
+.scroll-content .menu {
+  width: 400px; }
+
+.scroll-content .logo svg {
+  width: 170px; }
+
+span.header-caption {
+  font-family: 'PT Serif', serif;
+  color: #333333;
+  font-size: 0.8em;
+  padding-left: 4px;
+  margin-left: 6px;
+  border-left: 1px solid #CDCDCD; }
+
+.scroll-content a.header-link {
+  font-size: 0.8em; }
+
 .container {
   padding: 20px;
   min-height: 100%;
@@ -374,30 +397,6 @@ nav-container
   justify-content: space-between;
   align-items: center;
   width: 100%; }
-  .article-head .glyph, .article-footer .glyph {
-    transition-duration: 0s;
-    background: #EEEEEE;
-    border-radius: 50%;
-    padding: 6px;
-    font-size: 14px;
-    margin-left: 14px; }
-    .article-head .glyph:hover, .article-footer .glyph:hover {
-      background: none;
-      padding: 5px;
-      border: 1px solid #CDCDCD; }
-  .article-head .light, .article-footer .light {
-    height: 100%;
-    padding: 0;
-    vertical-align: middle;
-    color: #CCCCCC;
-    background: none;
-    color: black;
-    font-size: 2.2em;
-    margin-left: 14px; }
-    .article-head .light:hover, .article-footer .light:hover {
-      border: none;
-      padding: 0;
-      color: #C2C2C2; }
 
 .yt-video {
   position: relative;
@@ -599,3 +598,29 @@ button[class|=icon] {
   font-size: 0.8em;
   text-transform: uppercase;
   line-height: 1.8em; }
+
+.article-head .glyph, .article-footer .glyph, .social-media .glyph {
+  transition-duration: 0s;
+  background: #EEEEEE;
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 14px;
+  margin-left: 14px; }
+  .article-head .glyph:hover, .article-footer .glyph:hover, .social-media .glyph:hover {
+    background: none;
+    padding: 5px;
+    border: 1px solid #CDCDCD; }
+
+.article-head .light, .article-footer .light, .social-media .light {
+  height: 100%;
+  padding: 0;
+  vertical-align: middle;
+  color: #CCCCCC;
+  background: none;
+  color: black;
+  font-size: 2.2em;
+  margin-left: 14px; }
+  .article-head .light:hover, .article-footer .light:hover, .social-media .light:hover {
+    border: none;
+    padding: 0;
+    color: #C2C2C2; }

@@ -12,6 +12,7 @@ body {
     width: 300px;
 }
 .buttons {
+    //width: 200px;
     display: flex;
     justify-content: flex-end;
 }
@@ -49,7 +50,36 @@ body {
     }
 }
 
+.top-page-content, .scroll-content {
+    transition-duration: 0.5;
+}
+.top-page-content {
+    //display: flex; display: none;
+}
+.scroll-content {
+    display: none;
+}
+.scroll-content .menu {
+    width: 400px;
+}
+.scroll-content .logo svg {
+    width: 170px;
+}
+.scroll-content .social-media {
+    //width: 170px;
+}
 
+span.header-caption {
+    font-family: 'PT Serif', serif;
+    color: $content-font-color;
+    font-size: 0.8em;
+    padding-left: 4px;
+    margin-left: 6px;
+    border-left: 1px solid $icons-border;
+}
+.scroll-content a.header-link {
+    font-size: 0.8em;
+}
 
 
 // FOOTER LAYOUT
