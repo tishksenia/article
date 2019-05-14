@@ -32,8 +32,6 @@ var navigationModule = (function() {
 							submenus[i + 1].style.visibility = 'hidden';
 						}
 					});
-				})(i);
-				(function(i) {
 					links[i].addEventListener('mouseleave', function(event) {
 						if(event.relatedTarget.className != 'nav-container' && event.toElement.className != 'submenu') {
 							submenus[i].style.visibility = 'hidden';

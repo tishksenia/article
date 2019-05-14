@@ -17,7 +17,7 @@ var searchFormModule = (function() {
                     toggle_button.classList.remove('active');
                 }
                 
-            }
+            };
 		},
 		init: function() {
 			this.addEventListeners();

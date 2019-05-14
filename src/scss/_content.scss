@@ -110,3 +110,67 @@
     position: relative;
     left: -10%;
 }
+
+.image-content {
+    position: relative;
+}
+
+.container > .widest-content-piece, .container > .wide-content-piece {
+
+    position: fixed;
+    left: 0;
+    top:0; 
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    padding: 20px 2px;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    background-color: #FFFFFF;
+    transition-duration: 0.4s;
+    opacity: 1;
+}
+
+.container > .widest-content-piece img, .container > .wide-content-piece img {
+    position: fixed;
+    
+    height: 95%;
+    width: auto;
+}
+.container > .wide-content-piece  {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+}
+.container > .wide-content-piece button.icon-enlarge2 {
+    position: absolute;
+}
+.container > .wide-content-piece img {
+    margin: 0 auto;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;
+}
+
+.container > .widest-content-piece .content-caption, 
+.container > .wide-content-piece .content-caption{
+    position: absolute;
+    top: 45%;
+    bottom: 50%;
+    right: 30px;
+    z-index: 160;
+    width: 10%;
+    span {
+        display: block;
+    }
+    line-height: 1.2em;
+}

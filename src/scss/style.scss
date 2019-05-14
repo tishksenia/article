@@ -132,6 +132,42 @@ button[class|=icon] {
     margin-left: 8px;
 }
 
+//button on the expanded image block
+.image-content button.icon-enlarge2 {
+    outline: none;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 105;
+    right: 20px;
+    bottom: 20px;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 50%;
+}
+
+.container > .widest-content-piece .image-content button.icon-enlarge2,
+.container > .wide-content-piece .image-content button.icon-enlarge2  {
+    background-color: rgba(0, 0, 0, 0);
+    color: #000000;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: auto;
+    left: auto;
+    padding: 20px;
+    &:hover {
+        padding: 19px;
+        background-color: $enlarge-button--hover;
+        border: 1px solid $enlarge-button-border--hover;
+    right: 19px;
+    }
+}
+.image-content button.icon-enlarge2 {
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
 // HEADINGS
 .footer-column h2 {
     font-family: 'Open Sans', sans-serif;
@@ -140,8 +176,6 @@ button[class|=icon] {
     text-transform: uppercase;
     line-height: 1.8em;
 }
-
-
 .article-head, .article-footer, .social-media {
     .glyph {
         transition-duration: 0s;
