@@ -9,7 +9,7 @@ body {
     margin-top: $header-height;
 }
 .buttons, .menu {
-    width: 300px;
+    width: 370px;
 }
 .buttons {
     //width: 200px;
@@ -33,12 +33,16 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
 }
 .logo {
-    width: 200px;
+    width: 195px;
     padding-top: 5px;
 }
-
+.menu {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
 .menu .glyph {
     font-size: 1em;
     display: inline-block;
@@ -48,13 +52,20 @@ body {
     &:hover {
         background-color: $icons-head-bg;
     }
+    &.active {
+        background-color: $icons-head-bg;
+    }
+    // &:last-of-type {
+    //     margin-right: 0;
+    // }
+}
+.top-page-content a.header-link {
+    position: relative;
+    top: -2px;
 }
 
 .top-page-content, .scroll-content {
     transition-duration: 0.5;
-}
-.top-page-content {
-    //display: flex; display: none;
 }
 .scroll-content {
     display: none;
@@ -64,9 +75,6 @@ body {
 }
 .scroll-content .logo svg {
     width: 170px;
-}
-.scroll-content .social-media {
-    //width: 170px;
 }
 
 span.header-caption {
@@ -80,6 +88,44 @@ span.header-caption {
 .scroll-content a.header-link {
     font-size: 0.8em;
 }
+// search form
+// .top-page-content a.header-link {
+//     display: none;
+// }
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+.header__search-form {
+    //display: flex;
+    display: none;
+    // max-width: 210px;
+    width: 100%;
+    margin-left: 0;
+    input {
+        padding: 10px 20px;
+        margin: 0;
+        border: 0;
+        min-width: 210px;
+        border: 1px solid $search-form-border;
+        border-radius: 2px;
+        margin-right: 4px;
+    }
+    input[placeholder] {
+        text-transform: uppercase;
+        font-size: 0.69em;
+    }
+    button {
+        background-color: $search-form__button;
+        border: 1px solid $search-form__button--hover;
+        
+        &:hover {
+            background-color: $search-form__button--hover;
+        }
+    }
+}
+
 
 
 // FOOTER LAYOUT
