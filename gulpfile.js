@@ -17,7 +17,7 @@ function css() {
 function html() {
   return src('src/pug/*.pug')
     .pipe(pug())
-    .pipe(dest('dist/html'))
+    .pipe(dest('dist/'))
     .pipe(livereload())
 }
 
