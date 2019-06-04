@@ -1,0 +1,44 @@
+@media screen and (max-width: 1222px) {
+	//on header: hide search button, title, add user icon, plus buttons on the right side
+	.site-header .icon-search1, .site-header  .icon-search1::before {
+		display: none;
+	}
+	a.header-link {
+		display: none;
+	}
+	.main-menu-btn {
+		display: none;
+	}
+}
+@media screen and (max-width: 1000px) and (min-width: 649px) {
+.header-caption {
+	border-left: none;
+}
+	.container, .site-footer {
+		max-width: 100%;
+	}
+	.site-footer {
+		padding: 0 20px;
+	}
+	.article-container {
+		margin: 0 auto;
+		max-width: 90%;
+	}
+	.article-container h1 {
+		max-width: 80%;
+		margin-bottom: 50px;
+	}
+	.widest-content-piece {
+		width: 100%;
+
+	    left: 0;
+		margin: 0 auto;
+	}
+
+}
+@media all and (max-width: 650px) {
+	.article-container {
+		max-width: 90%;
+		margin: 0;
+	}
+}
