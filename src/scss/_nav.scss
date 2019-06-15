@@ -41,7 +41,7 @@ nav-container
     visibility: hidden;
     width: 200px;
     min-height: 200px;
-    transform: translateX(97%) translateY(-19.5%);
+    transform: translateX(96%) translateY(-38px);
     background-color: #FFFFFF;
     padding: 20px;
     border: 1px solid $menu-border;
@@ -52,7 +52,7 @@ nav-container
 
     &:before, &:after {
         right: 100%;
-        top: 25%;
+        top: 50px;
         border: solid transparent;
         content: " ";
         height: 0;

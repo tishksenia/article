@@ -6,3 +6,11 @@ mixin icons_block(width)
     if(width == 'wide')
         button.icon-bookmark.glyph.light
         button.icon-chat_bubble_outline.glyph.light
+        
+mixin tooltip(side)
+    div(class="tooltip " + side)
+        if(block)
+        block
+        .tail-shadow
+        .tail-upper-part
+        .tail-lower-part
